@@ -35,10 +35,13 @@ Make sure your Developer Tools are open at all times while working on this proje
 Before you click the "Complete Assessment" button on the Learning Platform, add your answers below each question and make a commit.
 
 1. When a child is clicked on in the browser, which module contains the code that will execute on that event happening? Can you explain the algorithm of that logic?
-   > Your answer here
+   > The code for the child click event is in the Kids.js module. When the click happens it checks if the click target has the "child" data-type. If it does, it gets the childs name and wish from the hidden state on the list item, and renders the interpolated string into the window alert.  
+
 2. In the **Pairings** module, why must the `findCelebrityMatch()` function be invoked inside the `for..of` loop that iterates the kids array?
-   > Your answer here
+   > Because it needs to be able to check the celebrityId property of each child object against the id property of each celebrity object which you are iterating through in the function itself. It effectively works as a nested for of loop.
+
 3. In the **CelebrityList** module, can you describe how the name of the sport that the celebrity plays can be displayed in the window alert text?
-   > Your answer here
+   > As the for of loop iterates through the celebrities array, and renders each celebrity as a list item, you apply hidden state on each list item that references that celebrities sport. Then you define a click event that if a celebrity is clicked on, it references that hidden state and interpolates it into a string that you're displaying in a window alert.
+
 4. Can you describe, in detail, the algorithm that is in the `main` module?
-   > Your answer here
+   > Its accessing the mainContainer id from the DOM using the querySelector method. Then it is generating an HTML structure where it invokes the Kids, Celebrities, and Pairings generator functions to render the HTML list items. It is then applying that HTML structure to the mainContainer we accessed before using the innerHTML method.
